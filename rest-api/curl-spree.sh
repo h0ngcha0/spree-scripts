@@ -4,13 +4,19 @@ echo "$#"
 
 usage(){
 cat <<EOF
-usage options
+usage: $0 options
 
 OPTIONS:
     -h       Hostname
     -p       Port
     -u       Url
     -k       Key
+
+URL and Key are mandatory, specify them either using -u and -k options or through SPREE_URL and SPREE_KEY environment variables.
+
+example:
+curl-spree.sh -k $YOUR_SPREE_KEY -u api/products/1
+
 EOF
 }
 
