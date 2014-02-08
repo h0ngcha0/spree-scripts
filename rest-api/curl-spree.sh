@@ -67,6 +67,4 @@ if [ -z "$SPREE_URL" ]; then
     exit 1
 fi
 
-CMD="curl --header \"X-Spree-Token: $SPREE_KEY\" $SPREE_HOSTNAME:$SPREE_PORT/$SPREE_URL"
-echo Running $CMD
 curl --header "X-Spree-Token: $SPREE_KEY" $SPREE_HOSTNAME:$SPREE_PORT/$SPREE_URL | python -mjson.tool
