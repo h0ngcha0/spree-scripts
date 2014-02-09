@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "$#"
-
 usage(){
 cat <<EOF
 usage: $0 options
